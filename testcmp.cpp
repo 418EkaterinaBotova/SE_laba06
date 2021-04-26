@@ -4,6 +4,7 @@
 using namespace std;
 
 int main()
+
 {
 //тестирование класса комплексных чисел
 
