@@ -14,7 +14,7 @@ class Complex
 
    Complex (double aRe = 0, double aIm = 0);
    Complex (const Complex &);
-   ~ Complex ();
+   ~Complex ();
 
    void Set(double aRe, double aIm = 0);
    operator double();
