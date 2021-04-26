@@ -16,7 +16,7 @@ using namespace std;
        Im = aRval.Im;
    }
 
-   Complex :: ~ Complex ()
+   Complex :: ~Complex ()
    {
        Re = 0.0;
        Im = 0.0;
