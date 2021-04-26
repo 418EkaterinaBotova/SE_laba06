@@ -22,7 +22,7 @@ using namespace std;
        Im = 0.0;
    }
 
-void Complex :: Set (double aRe, double aIm)
+   void Complex :: Set (double aRe, double aIm)
    {
        Re = aRe;
        Im = aIm;
@@ -54,12 +54,12 @@ void Complex :: Set (double aRe, double aIm)
        return Result;
    }
 
-   Complex Complex ::operator + (const double & aval)
+   Complex Complex ::operator + (const double & aRval)
    {
-       Complex result;
-       result.Re = Re + aval;
-       result.Im = Im;
-       return result;
+       Complex Result;
+       Result.Re = Re + aRval;
+       Result.Im = Im;
+       return Result;
    }
 
    Complex Complex :: operator - (const  double & aRval)
@@ -101,19 +101,19 @@ void Complex :: Set (double aRe, double aIm)
    }
 
    Complex & Complex :: operator - = (const Complex & aRval)
-  {
+   {
       Re - = aRval.Re;
       Im - = aRval.Im
       return * this;
-  }
+   }
 
    Complex & Complex :: operator * = (const Complex & aRval)
-  {
+   {
       double tmpRe = Re;
       Re = Re * aRval.Re - Im * aRval.Im;
       Im = Im * aRval.Re + tmpRe * aRval.Im;
       return * this;
-  }
+   }
 
    Complex & Complex :: operator + = (const double & aRval)
    {
@@ -156,14 +156,14 @@ void Complex :: Set (double aRe, double aIm)
        return * this;
    }
 
-   istream & operator >> (istream & stream, Complex & a)
+   istream & operator >> (istream & stream, Complex & aRval)
    {
        char tmp[256];
        stream >> a.Re >> a.Im >> tmp;
        return stream;
    }
 
-   ostream & operator << (ostream & stream, Complex & a)
+   ostream & operator << (ostream & stream, Complex & aRval)
 
    {
        stream << a.Re;
@@ -188,10 +188,10 @@ void Complex :: Set (double aRe, double aIm)
        return Result;
    }
 
-   Complex operator * (const double & aLval, const Complex & a)
+   Complex operator * (const double & aLval, const Complex & aRval)
    {
-       Complex r;
+       Complex Result;
        r.Re = aLval * a.Re;
        r.Im = aLval * a.Im;
-       return r;
+       return Result;
    }
