@@ -16,7 +16,7 @@ using namespace std;
        Im = aRval.Im;
    }
 
-   Complex :: ~Complex()
+   Complex :: ~ Complex ()
    {
        Re = 0.0;
        Im = 0.0;
@@ -35,7 +35,7 @@ using namespace std;
 
    double Complex :: abs()
    {
-       return sqrt(Re * Re + Im * Im);
+       return sqrt (Re * Re + Im * Im);
    }
 
    Complex Complex :: operator + (const Complex & aRval)
@@ -167,7 +167,7 @@ using namespace std;
 
    {
        stream << a.Re;
-       if(!(a.Im < 0)) stream << ' + ';
+       if (!(a.Im < 0)) stream << ' + ';
        stream << a.Im << ' i ';
        return stream;
    }
