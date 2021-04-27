@@ -121,7 +121,7 @@ using namespace std;
        return * this;
    }
 
-   Complex & Complex :: operator - = (const double & aRval)                                      {
+   Complex & Complex :: operator - = (const double & aRval)
    {
        Re - = aRval;
        return * this;
